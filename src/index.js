@@ -4,7 +4,7 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function header() {
+function Header() {
   return (
     <div>
       <h1>Hello World</h1>
@@ -13,7 +13,7 @@ function header() {
   )
 } 
 
-ReactDOM.render(header(),document.getElementById('root'));
+ReactDOM.render(<Header/>,document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
