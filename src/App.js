@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Form from './components/Form';
 
 class App extends React.Component {
   constructor(props) {
@@ -6,21 +7,20 @@ class App extends React.Component {
     this.state = {
       userName: 'Guest'
     }
-    this.handleChange = this.handleChange.bind(this);
+    this.changeName = this.changeName.bind(this);
   }
 
-  handleChange(e) {
+  changeName(name){
     this.setState({
-      userName: e.target.value.trim() ? e.target.value : 'Guest'
+      userName: name.trim() ? name : 'Guest'
     })
   }
-
+  
   render() {
     return (
       <div>
         <h1>Hello {this.state.userName}</h1>
-        <label htmlFor="user_name">Enter your name:</label> <br/>
-        <input id="user_name" type="text" onInput={this.handleChange}/>
+        <Form onInput={this.changeName} />
       </div>
     );
   }
