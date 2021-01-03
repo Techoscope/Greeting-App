@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './components/Form';
+import GreetingMessage from './components/GreetingMessage';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello {this.state.userName}</h1>
+        <GreetingMessage name={this.state.userName}/>
         <Form onInput={this.changeName} />
       </div>
     );
